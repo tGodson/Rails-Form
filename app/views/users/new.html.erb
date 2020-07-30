@@ -12,28 +12,45 @@
 </form> -->
 
 
+<!--
 <%= form_tag('/posts') do -%>
-  <label for="username">Username:</label>
+   <label for="username">Username:</label>
 
-  <input type="username" id="username" name="user[username]"><br><br>
+   <input type="username" id="username" name="user[username]"><br><br>
   <label for="email">Email:</label>
-  <input type="email" id="email" name="user[email]"><br><br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" password="user[password]"><br><br>
-  <div><%= password_tag "Password" %></div>
- <!--  <input type="submit" value="Submit"> -->
- <div><%= submit_tag 'Submit' %></div>
-<% end -%>
+   <input type="email" id="email" name="user[email]"><br><br>
+   <label for="password">Password:</label>
+   <input type="password" id="password" password="user[password]"><br><br>
+   <div><%= password_tag "Password" %></div>
+   <input type="submit" value="Submit"> 
+  <div><%= submit_tag 'Submit' %></div>
+ <% end -%>
+ -->
 
-<%#= form_tag do |f| %>
-<%#= label_tag(:username) %>
-<%#= text_field_tag(:username) %>
-<%# <br> %>
-<%#= label_tag(:password) %>
-<%#= password_field_tag(:password) %>
-<%# <br> %>
-<%#= label_tag(:email) %>
-<%#= text_field_tag(:email) %>
-<%# <br> %>
-<%#= submit_tag %>
-<%# end %>
+<!--
+<%= form_tag do %>
+<%= label_tag(:username) %>
+<%= text_field_tag(:username) %>
+<br>
+<%= label_tag(:email) %>
+<%= text_field_tag(:email) %>
+<br>
+<%= label_tag(:password) %>
+<%= password_field_tag(:password) %>
+<br>
+<%= submit_tag %>
+<% end %>
+-->
+ 
+<%= form_for(:user, url: users_path ) do |f|  %>
+    <%= f.label :username, "Username" %>
+    <%= f.text_field :username %>
+    <br>
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email %>
+    <br>
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit "Submit" %>
+<% end %>
