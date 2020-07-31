@@ -1,12 +1,2 @@
-<%= form_for(:user, url: edit_users_path ) do |f|  %>
-    <%= f.label :username, "Username" %>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :email, "Email" %>
-    <%= f.text_field :email %>
-    <br>
-    <%= f.label :password, "Password" %>
-    <%= f.password_field :password %>
-    <br>
-    <%= f.submit "Submit" %>
-<% end %>
+
+<%=render 'users/form' %>
