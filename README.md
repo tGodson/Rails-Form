@@ -37,13 +37,11 @@ $ rails db:migrate
 ```
 ## Usage
 
-_First, you need to create a user by filling the '/users/new' form
+- create user
+_First, you need to create a user by filling the 'localhost:3000/users/new' form
 
-
-_You can also edit user information on the edit form
-
-
-_or update user from the update form
+- Edit user
+_To edit a user, use the route 'localhost:3000/users/:id/edit'
 
 
 ## Authors
